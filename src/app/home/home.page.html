@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-card>
+        <ion-card-header class="ion-align-items-center">
+            <ion-row class="ion-align-items-center">
+                <ion-icon name="medkit-outline" color="light"></ion-icon>
+                <ion-card-title color="light"> Problems </ion-card-title>
+            </ion-row>
+        </ion-card-header>
+        <ion-list lines="none">
+            <ion-item *ngFor="let problem of problemList ">
+                <ion-label>
+                    <ion-text>{{problem ? problem.conditionsdescription:''}}</ion-text> <br>
+                </ion-label>
+            </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        </ion-list>
+    </ion-card>
 </ion-content>
